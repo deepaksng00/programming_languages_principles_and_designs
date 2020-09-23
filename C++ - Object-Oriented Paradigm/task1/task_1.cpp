@@ -3,11 +3,11 @@
 #include "FizzBuzz.cpp"
 
 int main() {
-	Calculate * fizz = new Calculate(3);
-	Calculate * buzz = new Calculate(5);
-	Calculate * fizzbuzz = new Calculate(15);
+	Calculate * type1 = new Calculate(3, "Fizz");
+	Calculate * type2 = new Calculate(5, "Buzz");
+	Calculate * type12 = new Calculate(15, "FizzBuzz");
 
-	FizzBuzz * fizzbuzz_session = new FizzBuzz(fizz, buzz, fizzbuzz);
+	FizzBuzz * fizzbuzz_session = new FizzBuzz(type1, type2, type12);
 
 	fizzbuzz_session->calculateFizzBuzz();
 }

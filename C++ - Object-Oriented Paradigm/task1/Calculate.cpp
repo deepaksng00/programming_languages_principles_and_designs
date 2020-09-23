@@ -3,10 +3,12 @@
 class Calculate {
 	private:
 		int divisor;
+		std::string type;
 
 	public:
-		Calculate(int userDivisor) {
+		Calculate(int userDivisor, std::string label) {
 			divisor = userDivisor;
+			type = label;
 		}
 
 		Calculate() {
@@ -15,5 +17,9 @@ class Calculate {
 
 		int getDivisor() {
 			return divisor;
+		}
+
+		std::string getType() {
+			return type;
 		}
 };
