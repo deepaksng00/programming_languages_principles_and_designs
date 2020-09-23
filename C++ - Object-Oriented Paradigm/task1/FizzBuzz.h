@@ -1,0 +1,5 @@
+class FizzBuzz {
+	private:
+
+	public:
+};
