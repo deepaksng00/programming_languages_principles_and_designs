@@ -1,22 +1,28 @@
-#include <iostream>
-
-using namespace std;
-
 class Letter {
 	private:
 		char letter; 
 		int occurrences;
+		int * occurrencesPtr = &occurrences;
+		char * letterPtr = &letter;
+
+		void incrementOccurrencesPrivate() {
+			*occurrencesPtr = *occurrencesPtr + 1;
+		}
 	public:
 		Letter(char userLetter, int userOccurrences) {
-			letter = userLetter;
-			occurrences = userOccurrences;
+			*letterPtr = userLetter;
+			*occurrencesPtr = userOccurrences;
 		}
 
 		char getLetter() {
-			return letter;
+			return *letterPtr;
 		}
 
 		int getOccurrences() {
-			return occurrences;
+			return *occurrencesPtr;
 		}
-}
+
+		void incrementOccurrences() {
+			incrementOccurrencesPrivate();
+		}
+};

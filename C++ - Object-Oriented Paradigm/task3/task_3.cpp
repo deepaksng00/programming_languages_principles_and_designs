@@ -1,19 +1,19 @@
 #include <iostream>
-#include <new>
-#include <cstring>
-#include "Letters.cpp"
+#include <vector>
 
 using namespace std;
 
-int main() {
-	alphabet * alphabetgenerator = new Alphabet();
-	string s = "helloworld";
+#include "Alphabet.cpp"
+#include "Letter.cpp"
+#include "Frequency.cpp"
 
-	string alphabet = alphabetgenerator->getAlphabet();
-	
-	for(int i = 0; i < 26; i++) {
-		for(int x = 0; x < strlen(s); x++) {
-			if(alphabet[i] == s[x])
-		}
+int main() {
+	Frequency * f = new Frequency("helloworld");
+	vector<Letter*> v = f->getArray();
+
+	cout << "Size of vector: " << v.size() << endl;
+
+	for(auto vi : v) {
+		cout << vi->getLetter() << ":" << vi->getOccurrences() << endl;
 	}
 }

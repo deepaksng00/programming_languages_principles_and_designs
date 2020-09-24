@@ -1,6 +1,3 @@
-#include <iostream>
-#include <cstring>
-
 class Alphabet {
 	private:
 		char alphabet[];
@@ -15,7 +12,7 @@ class Alphabet {
 			generateAlphabet();
 		}
 
-		std::string getAlphabet() {
+		string getAlphabet() {
 			return alphabet;
 		}
 
