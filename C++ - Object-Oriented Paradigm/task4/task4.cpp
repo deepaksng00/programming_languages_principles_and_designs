@@ -13,5 +13,6 @@ using namespace std;
 
 
 int main() {
-	
+	Pizza * pizza = new Pizza("Margherita", 12.45, 1459, "Mozzarella");
+	cout << pizza->getTopping();
 }
