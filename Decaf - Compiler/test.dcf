@@ -1,0 +1,6 @@
+class hello { 
+   int hello[0];
+   void helloMethod(int i, int x) {
+
+   }
+}
