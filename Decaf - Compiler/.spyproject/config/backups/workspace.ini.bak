@@ -6,5 +6,5 @@ save_non_project_files = False
 
 [main]
 version = 0.2.0
-recent_files = ['decaf-semantics.py', 'test.dcf']
+recent_files = ['decaf-semantics.py', 'test.dcf', 'Decaf.g4', 'DecafVisitor.py', 'SymbolTable.py']
 
