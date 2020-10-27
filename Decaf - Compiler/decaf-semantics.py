@@ -44,7 +44,7 @@ class DecafSemanticChecker(DecafVisitor):
                 self.st.addSymbol(field_symbol)
         
         self.visitChildren(ctx)
-        
+    
     def visitMethod_decl(self, ctx:DecafParser.Method_declContext):
         self.st.enterScope() # creating new scope for method
         
@@ -68,11 +68,12 @@ class DecafSemanticChecker(DecafVisitor):
                                      line=line_num,
                                      params=ctx.method_decl_args())
         
-        self.self.addSymbol(method_symbol)
             
         self.visitChildren(ctx)
         
         self.st.exitScope()
+        
+        self.st.addSymbol(method_symbol)
 
 filein = open('test.dcf', 'r')
 lexer = DecafLexer(ant.InputStream(filein.read()))

@@ -1,6 +1,6 @@
 class Program {
-    int a;
+    int b;
     int getItems(int a, boolean b) {
-    
+        b = a + b + 1;
     }
 }
